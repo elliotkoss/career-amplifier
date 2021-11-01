@@ -2,12 +2,27 @@
 
 ## Description
 
-This is the public repo for careeramplifier.com, a product manager interview prep service. The intent is to build this in public, and potentially use this website as a tool to teach people about product, marketing, analytics, and more.
+This is the public repo for careeramplifier.com, a product manager interview prep service. The intent is to build this in public, and use this website as a tool to teach people about product, marketing, analytics, and more.
 
-This is a static website that's hosted in an AWS S3 bucket.
+This is a static website that's hosted in an AWS S3 bucket with Stripe Payment Links and Calendly for scheduling. 
+
+Have a question, tweet at us @careeramp_
+
+## v0.0.2 - Payments
+
+- Create payment-confirmation.html
+- Add 'noindex' to payment-confirmation.html and call-scheduled.html
+- Stripe payment links redirects to payment-confirmation.html for tracking
+- Update Google Tag Manager (GTM) to trigger conversion to Google Analytics (GA)
+- Pass 'amount' utm param value in GTM
+- Update GA to track the conversion
 
 ## Upcoming
 
+I may convert these to issues at some point.
+
+- Nagging issue: The goal tracking in GA seems off. The events appear to track as expected, but they aren't tracking as goals. Something for later.
+- Meta description to render specific text and image when the link is shared
 - FB Pixel + Facebook Retargeting + Don't market to converted users
 - Privacy policy
 - SSL + Cloudfront (AWS, no GitHub changes)
@@ -17,6 +32,8 @@ This is a static website that's hosted in an AWS S3 bucket.
 - New page (/[coach-name]) to feature a Career Coach (image, bio, Twitter + LinkedIn, Recommended Books, Recommended Articles, Best Advice)
 - Tech Career Coaching page
 - Product Marketing Management page
+- Add GTM to pass utm_source and other marketing UTM params from one page to another. Tutorial with Code https://www.analyticsmania.com/post/transfer-utm-parameters-google-tag-manager/
+- Pass utm param tracking. https://easyautotagging.com/track-custom-utm-parameters-google-analytics/
 
 More A/B experiment ideas
 - 'What to expect for the first session' section on the homepage
@@ -25,7 +42,9 @@ More A/B experiment ideas
 - 'Product Case Question Bank' section on the homepage
 - Generic homepage with references to Tech / PM / PMM coaching
 
-## v0.0.1 - Hello World
+## History
+
+v0.0.1 - Hello World
 
 - Static website: HTML + CSS + JS
 - index.html is the homepage, and it's the only page in the sitemap.txt. 
