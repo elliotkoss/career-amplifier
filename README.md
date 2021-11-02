@@ -8,32 +8,35 @@ This is a static website that's hosted in an AWS S3 bucket with Stripe Payment L
 
 Have a question, tweet at us @careeramp_
 
-## v0.0.2 - Payments
+## v0.0.3 - Added New Content to Homepage
 
-- Create payment-confirmation.html
-- Add 'noindex' to payment-confirmation.html and call-scheduled.html
-- Stripe payment links redirects to payment-confirmation.html for tracking
-- Update Google Tag Manager (GTM) to trigger conversion to Google Analytics (GA)
-- Pass 'amount' utm param value in GTM
-- Update GA to track the conversion
+- Rearranged sections on the homepage
+- Added PM Interview Question Types
+- Added Featured Career Coach
+- Added Recommended Books
+- Added new images
 
 ## Upcoming
 
-I may convert these to issues at some point.
+I NEED to convert these to issues at some point.
 
+- SSL + Cloudfront (AWS, no GitHub changes)
+- Page Speed Improvements (see page speed score)
+- Add FAQ section to homepage
+- Add The Product Manager Role section to homepage
 - Nagging issue: The goal tracking in GA seems off. The events appear to track as expected, but they aren't tracking as goals. Something for later.
 - Meta description to render specific text and image when the link is shared
 - FB Pixel + Facebook Retargeting + Don't market to converted users
 - Privacy policy
-- SSL + Cloudfront (AWS, no GitHub changes)
 - Add more keywords
-- remove .html from urls
+- remove .html from urls (this may be more effort than it's worth.)
 - 1st A/B experiment - 'Featured Career Coach' (image, short bio, Twitter + LinkedIn)
 - New page (/[coach-name]) to feature a Career Coach (image, bio, Twitter + LinkedIn, Recommended Books, Recommended Articles, Best Advice)
 - Tech Career Coaching page
 - Product Marketing Management page
 - Add GTM to pass utm_source and other marketing UTM params from one page to another. Tutorial with Code https://www.analyticsmania.com/post/transfer-utm-parameters-google-tag-manager/
 - Pass utm param tracking. https://easyautotagging.com/track-custom-utm-parameters-google-analytics/
+- Add Amazon affiliate links to the book recommendation page
 
 More A/B experiment ideas
 - 'What to expect for the first session' section on the homepage
@@ -43,6 +46,15 @@ More A/B experiment ideas
 - Generic homepage with references to Tech / PM / PMM coaching
 
 ## History
+
+v0.0.2 - Payments
+
+- Create payment-confirmation.html
+- Add 'noindex' to payment-confirmation.html and call-scheduled.html
+- Stripe payment links redirects to payment-confirmation.html for tracking
+- Update Google Tag Manager (GTM) to trigger conversion to Google Analytics (GA)
+- Pass 'amount' utm param value in GTM
+- Update GA to track the conversion
 
 v0.0.1 - Hello World
 
