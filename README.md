@@ -8,20 +8,29 @@ This is a static website that's hosted in an AWS S3 bucket with Stripe Payment L
 
 Have a question, tweet at us @careeramp_
 
-## v0.0.3 - Added New Content to Homepage
+## v0.0.4 - Optimize Website
 
-- Rearranged sections on the homepage
-- Added PM Interview Question Types
-- Added Featured Career Coach
-- Added Recommended Books
-- Added new images
+I used the [Page Speed Insights](https://developers.google.com/speed/pagespeed/insights/) tool to determine what to optimize. Plus, I needed SSL and a CDN for best practices anyway. The addition of the CDN made a noticeable difference in the website's Page Speed Scores which will have a positive impact on both Search Engine Optimization and Google Ad's Quality Score which directly impacts ad pricing. In other words, this release benefits revenue and marketing efficiency. The image format change doesn't seem to have had as big an impact but it will keep the website light, so it's good practice to do this.
+				
+				Mobile 				Desktop
+Before			50 					80
+After			62 (+24%)			90 (+12.5%)
+
+- Updated all the images used to WebP format. After looking around, I decided to just download an app and manually convert. The code version didn't seem worth the effort for this project, but it's odd that there isn't better Mac support for using homebrew. Perhaps I just didn't look in the right places: https://apps.apple.com/us/app/webp-converter-anywebp/id1527716894?mt=12
+- Added the Twitter and GitHub logos + links for Career Amplifier to the footer.
+
+Changes in AWS
+- Added SLL certificate in AWS + Cloudfront as the CDN (with HTTP to HTTPS redirects so every connection to the server will be secure with TLS v1.2). This will enable the website to load significantly faster while also increasing its security. This [tutorial](https://link.medium.com/nxCSUEwaSkb) was invaluable.
+- Fixed the www.careeramplifier.com issue by point the domain via Route 53 to the CDN (it wasn't possible to point this to the careeramplifier.com S3 bucket since the name has to match the domain exactly).
+- Learned about invalidating paths in Cloudfront. If you release your code but realize you have to fix something so you quickly redeploy the fix, without invalidating the path, Cloudfront won't update the version of the website it has cached for easier distribution. As of now, [Cloudfront allows up to 1,000 invalidations for free per month](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Invalidation.html#PayingForInvalidation).
 
 ## Upcoming
 
 I NEED to convert these to issues at some point.
 
-- SSL + Cloudfront (AWS, no GitHub changes)
-- Page Speed Improvements (see page speed score)
+X SSL + Cloudfront (AWS, no GitHub changes)
+X Page Speed Improvements (see page speed score)
+X 'Featured Career Coach' (image, short bio, Twitter + LinkedIn)
 - Add FAQ section to homepage
 - Add The Product Manager Role section to homepage
 - Nagging issue: The goal tracking in GA seems off. The events appear to track as expected, but they aren't tracking as goals. Something for later.
@@ -30,7 +39,6 @@ I NEED to convert these to issues at some point.
 - Privacy policy
 - Add more keywords
 - remove .html from urls (this may be more effort than it's worth.)
-- 1st A/B experiment - 'Featured Career Coach' (image, short bio, Twitter + LinkedIn)
 - New page (/[coach-name]) to feature a Career Coach (image, bio, Twitter + LinkedIn, Recommended Books, Recommended Articles, Best Advice)
 - Tech Career Coaching page
 - Product Marketing Management page
@@ -46,6 +54,14 @@ More A/B experiment ideas
 - Generic homepage with references to Tech / PM / PMM coaching
 
 ## History
+
+v0.0.3 - Added New Content to Homepage
+
+- Rearranged sections on the homepage
+- Added PM Interview Question Types
+- Added Featured Career Coach
+- Added Recommended Books
+- Added new images
 
 v0.0.2 - Payments
 
