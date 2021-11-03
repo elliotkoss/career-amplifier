@@ -16,7 +16,7 @@ I used the [Page Speed Insights](https://developers.google.com/speed/pagespeed/i
 Before			50 					80
 After			62 (+24%)			90 (+12.5%)
 
-- Updated all the images used. JPG/PNG to WebP converter. After looking around, I decided to just download this app and manually convert. The code version didn't seem worth the effort for this project, but it's odd that there isn't better Mac support for using homebrew. Perhaps I just didn't look in the right places: https://apps.apple.com/us/app/webp-converter-anywebp/id1527716894?mt=12
+- Updated all the images used to WebP format. After looking around, I decided to just download an app and manually convert. The code version didn't seem worth the effort for this project, but it's odd that there isn't better Mac support for using homebrew. Perhaps I just didn't look in the right places: https://apps.apple.com/us/app/webp-converter-anywebp/id1527716894?mt=12
 - Added the Twitter and GitHub logos + links for Career Amplifier to the footer.
 
 Changes in AWS
