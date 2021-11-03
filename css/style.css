@@ -746,7 +746,7 @@ HISTORY MISSION
 
 ==============================*/
 #section-strategy {
-  background: url("../images/bg/bg-1.jpg") 50% 50% no-repeat;
+  background: url("../images/bg/bg-1.webp") 50% 50% no-repeat;
   background-size: cover;
 }
 
@@ -1309,7 +1309,7 @@ BLOG SINGLE
 #footer {
   padding-bottom: 60px;
   position: relative;
-  background: url("../images/bg/2.png");
+  background: url("../images/bg/2.webp");
   border-top: 1px solid #eee;
 }
 
